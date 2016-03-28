@@ -5,6 +5,8 @@ public class GameManager : MonoBehaviour {
 
     public static GameManager instance = null;
 
+    public GameObject m_MenuHome;
+    public GameObject m_MenuTraining;
 
 	// Use this for initialization
 	void Awake ()
@@ -16,13 +18,19 @@ public class GameManager : MonoBehaviour {
 
         DontDestroyOnLoad(gameObject);	
 	}
-	
-    void InitGame()
-    {
 
+    public void openMenu( string panelName )
+    {
+        m_MenuHome.SetActive(false);
+        m_MenuTraining.SetActive(false);
+        
+        if( panelName == "Training" )
+        {
+            m_MenuTraining.SetActive(true);
+        }
+        else
+        {
+            m_MenuHome.SetActive(true);
+        }
     }
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }
