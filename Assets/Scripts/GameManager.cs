@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour {
 
     public GameObject m_MenuHome;
     public GameObject m_MenuTraining;
+    public GameObject m_Avatar;
 
 	// Use this for initialization
 	void Awake ()
@@ -23,6 +24,7 @@ public class GameManager : MonoBehaviour {
     {
         m_MenuHome.SetActive(false);
         m_MenuTraining.SetActive(false);
+        m_Avatar.SetActive(false);
         
         if( panelName == "Training" )
         {
@@ -31,6 +33,12 @@ public class GameManager : MonoBehaviour {
         else
         {
             m_MenuHome.SetActive(true);
+            m_Avatar.SetActive(true);
         }
+    }
+
+    public void backToHome()
+    {
+        openMenu("Home");
     }
 }
