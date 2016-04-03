@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.3.4f1</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -64,8 +66,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\ChangeScene.cs" />
+    <Compile Include="Assets\Characters\SportyGirl\Demo\Scripts\Actions.cs" />
+    <Compile Include="Assets\Characters\SportyGirl\Demo\Scripts\CharacterPanel.cs" />
+    <Compile Include="Assets\Characters\SportyGirl\Demo\Scripts\CharacterViewer.cs" />
+    <Compile Include="Assets\Characters\SportyGirl\Demo\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\PlayerControllerBall.cs" />
+    <Compile Include="Assets\Scripts\DashManager.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\LevelStates\AbstractLevelState.cs" />
+    <Compile Include="Assets\Scripts\LevelStates\ConcreteLevelState.cs" />
+    <Compile Include="Assets\Scripts\LevelStates\Dash\IntroDash.cs" />
     <Compile Include="Assets\Scripts\Loader.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Characters\SportyGirl\Shaders\SkinShader.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
